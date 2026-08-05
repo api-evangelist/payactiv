@@ -1,18 +1,74 @@
 aid: payactiv
 name: PayActiv
-description: 'PayActiv is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Payactiv is a Milpitas, California financial-worktech company that provides Earned Wage Access (EWA),
+  a digital wallet, Visa prepaid and payroll cards, savings and financial-wellness services to hourly
+  workers through their employers. Its developer-facing product, Access-as-a-Service, packages that
+  platform as modular APIs so HCM, HRIS, payroll and benefits platforms can embed earned wage access,
+  card issuance and transactions, instant payouts and workforce-data workflows under their own brand.
+  The API surface is documented as OpenAPI-based inside a developer portal at developer.payactiv.com,
+  which also carries the platform change log and sandbox environments; the portal requires an account,
+  so no public specification, reference or sandbox values are reachable anonymously. Payactiv is
+  registered with NMLS (ID 2591928) and holds state EWA licenses, and publishes a Trust Center citing
+  SOC 2, ISO 27001, PCI DSS and CCPA.
+image: https://payactiv.com/wp-content/uploads/2021/04/cropped-siteicon-192x192.png
 url: https://raw.githubusercontent.com/api-evangelist/payactiv/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-04'
 modified: '2026-08-04'
 tags:
 - Company
-apis: []
+- Financial Services
+- Earned Wage Access
+- Payments
+- Payroll
+- Human Resources
+- Cards
+- Financial Wellness
+- Fintech
+apis:
+- aid: payactiv:payactiv-access-as-a-service-api
+  name: Payactiv Access-as-a-Service API
+  description: >-
+    Access-as-a-Service is Payactiv's API-driven infrastructure for embedding Earned Wage Access, debit
+    and payroll card programs, instant payouts, and HCM workforce-data workflows into a partner platform
+    under the partner's own brand. Payactiv documents the surface as authentication, orchestration,
+    webhooks and sandbox environments, with an OpenAPI-based reference, change log and sandbox samples
+    published inside the developer portal. The specification is not served anonymously.
+  humanURL: https://payactiv.com/developers/
+  baseURL: https://api.payactiv.com
+  tags:
+  - Earned Wage Access
+  - Payouts
+  - Cards
+  - Payroll
+  - Webhooks
+  properties:
+  - type: DeveloperPortal
+    url: https://developer.payactiv.com/
+  - type: Documentation
+    url: https://payactiv.com/developers/
+  - type: SignUp
+    url: https://developer.payactiv.com/#/signup
+  - type: Login
+    url: https://developer.payactiv.com/#/login
+  x-evidence:
+    fetched: '2026-08-04'
+    baseURL_probe:
+      url: https://api.payactiv.com/
+      http_status: 500
+      note: >-
+        Host resolves to an AWS ELB named api-v2 fronting Microsoft-IIS/10.0 (ASP.NET 4.0); the root
+        path returns an ASP.NET runtime-error page, so the host is live but exposes no anonymous route.
+    reference_probe:
+      url: https://apidevelopergatewayservice.payactiv.com/users/modules/1
+      http_status: 401
+      note: >-
+        The developer portal (Angular SPA, meta robots noindex,nofollow) loads its OpenAPI documents
+        from this gateway endpoint and renders them with swagger-ui-dist / redoc. Anonymous requests
+        return 401, so the specification cannot be harvested without portal credentials.
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -20,4 +76,59 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://forgeglobal.com/payactiv_stock/
+  url: https://payactiv.com/
+- type: DeveloperPortal
+  url: https://developer.payactiv.com/
+- type: Documentation
+  url: https://payactiv.com/developers/
+- type: SignUp
+  url: https://developer.payactiv.com/#/signup
+- type: Login
+  url: https://developer.payactiv.com/#/login
+- type: Support
+  url: https://payactiv.com/help/
+- type: Blog
+  url: https://payactiv.com/blog/
+- type: TermsOfService
+  url: https://payactiv.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://payactiv.com/privacy-policy/
+- type: Compliance
+  url: https://payactiv.com/trust-center/
+- type: StatusPage
+  url: https://status.payactiv.com/
+- type: LLMsTxt
+  url: llms/payactiv-llms.txt
+- type: WellKnown
+  url: well-known/payactiv-well-known.yml
+- type: DomainSecurity
+  url: security/payactiv-domain-security.yml
+- type: TrustCenter
+  url: security/payactiv-trust-center.yml
+- type: Conformance
+  url: conformance/payactiv-conformance.yml
+- type: Lifecycle
+  url: lifecycle/payactiv-lifecycle.yml
+x-enrichment:
+  date: '2026-08-04'
+  status: minimal
+  artifacts_added: 6
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: partner-login
+  detail: >-
+    Payactiv markets an OpenAPI-based Access-as-a-Service reference, change log and sandbox, but the
+    portal at developer.payactiv.com is an Angular SPA marked noindex,nofollow that loads every spec
+    from apidevelopergatewayservice.payactiv.com/users/modules/{id}, which returns 401 without portal
+    credentials.
+  evidence:
+  - url: https://apidevelopergatewayservice.payactiv.com/users/modules/1
+    status: 401
+  - url: https://developer.payactiv.com/openapi.json
+    status: 200
+  - url: https://api.payactiv.com/openapi.json
+    status: 500
+  - url: https://payactiv.com/.well-known/agent-card.json
+    status: 404
+  checked: '2026-08-04'

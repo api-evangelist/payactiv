@@ -1,0 +1,22 @@
+generated: '2026-08-04'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: payactiv.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov  2 19:01:33 2026 GMT
+  hsts: true
+  hsts_max_age: 63072000
+- host: api.payactiv.com
+  https: true
+  tls_version: TLSv1.2
+  cert_expires: Nov 30 23:59:59 2026 GMT
+  hsts: null
+domains:
+- domain: payactiv.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: none

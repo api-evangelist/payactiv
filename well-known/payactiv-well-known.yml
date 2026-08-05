@@ -1,0 +1,51 @@
+generated: '2026-08-04'
+method: probed
+source: live GET of /.well-known/* on every Payactiv host in apis.yml
+summary:
+  documents_found: 0
+  note: >-
+    No RFC 8615 discovery documents are published on any Payactiv host. The corporate site returns a
+    WordPress 404 page for every /.well-known/ path, the API host returns an ASP.NET runtime error,
+    and the developer-portal SPA answers 200 with its Angular index shell for every path (a catch-all,
+    not a document) — those 200s are recorded as shell, not as hits.
+hosts:
+- host: https://payactiv.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+- host: https://api.payactiv.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 500
+  - path: /.well-known/openid-configuration
+    status: 500
+  - path: /.well-known/oauth-authorization-server
+    status: 500
+  - path: /.well-known/agent-card.json
+    status: 500
+- host: https://developer.payactiv.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    result: spa-shell
+    note: Angular index.html returned for every path; not a well-known document.
+  - path: /.well-known/agent-card.json
+    status: 200
+    result: spa-shell
+    note: Angular index.html returned for every path; not an agent card.
+- host: https://apidevelopergatewayservice.payactiv.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
