@@ -20,6 +20,16 @@ created: '2026-08-04'
 modified: '2026-08-04'
 tags:
 - Company
+- Financial-Services
+- Earned Wage Access
+- Payments
+- Payroll
+- Human Resources
+- Cards
+- Financial Wellness
+- Fintech
+tags_raw:
+- Company
 - Financial Services
 - Earned Wage Access
 - Payments
@@ -40,6 +50,12 @@ apis:
   humanURL: https://payactiv.com/developers/
   baseURL: https://api.payactiv.com
   tags:
+  - Earned Wage Access
+  - Payouts
+  - Cards
+  - Payroll
+  - Webhook
+  tags_raw:
   - Earned Wage Access
   - Payouts
   - Cards
