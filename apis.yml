@@ -11,6 +11,17 @@ description: >-
   so no public specification, reference or sandbox values are reachable anonymously. Payactiv is
   registered with NMLS (ID 2591928) and holds state EWA licenses, and publishes a Trust Center citing
   SOC 2, ISO 27001, PCI DSS and CCPA.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://payactiv.com/wp-content/uploads/2021/04/cropped-siteicon-192x192.png
 url: https://raw.githubusercontent.com/api-evangelist/payactiv/refs/heads/main/apis.yml
 x-type: company
