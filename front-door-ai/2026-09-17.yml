@@ -1,0 +1,25 @@
+# Front Door AI Index — payactiv — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: payactiv
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: payactiv.com
+  final_host: payactiv.com
+  ownership: own
+  owner: payactiv
+  shares_host_with: null
+  inherited_from: null
+  verdict: silent
+  score: 0
+  host_score: 0
+  density: 0.0
+  words: 1341
+  tiers:
+    agentic: 0
+    core: 0
+    model: 0
+  ambiguous: 1
+  top_terms:
+    agent: 1
