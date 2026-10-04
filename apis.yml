@@ -43,7 +43,7 @@ created: '2026-08-04'
 modified: '2026-08-04'
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Earned Wage Access
 - Payments
 - Payroll
@@ -61,6 +61,7 @@ tags_raw:
 - Cards
 - Financial Wellness
 - Fintech
+- Financial-Services
 apis:
 - aid: payactiv:payactiv-access-as-a-service-api
   name: Payactiv Access-as-a-Service API
