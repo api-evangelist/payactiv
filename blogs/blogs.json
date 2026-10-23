@@ -17,19 +17,23 @@
     },
     {
       "source": "https://payactiv.com/blog/",
-      "feed_url": "https://payactiv.com/blog/feed/",
+      "feed_url": "https://payactiv.com/blog/blog/feed/",
       "title": "",
-      "saved": 1,
+      "saved": 0,
       "method": "discovered"
     },
     {
+      "source": "https://payactiv.com/blog/feed/",
+      "error": "HTTPError"
+    },
+    {
       "source": "https://payactiv.com/help/",
-      "feed_url": "https://payactiv.com/help/",
+      "feed_url": "https://payactiv.com/help/blog/feed/",
       "title": "",
       "saved": 0,
-      "method": "none"
+      "method": "discovered"
     }
   ],
-  "post_count": 1,
-  "fetched": "2026-10-10T13:15:00Z"
+  "post_count": 11,
+  "fetched": "2026-10-17T14:53:57Z"
 }
