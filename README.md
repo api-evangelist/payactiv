@@ -64,5 +64,92 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-PayActiv is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/payactiv_stock/
+Payactiv is a Milpitas, California financial-worktech company that provides Earned Wage Access (EWA), a digital wallet, Visa prepaid and payroll cards, savings and financial-wellness services to hourly workers through their employers. Its developer-facing product, Access-as-a-Service, packages that platform as modular APIs so HCM, HRIS, payroll and benefits platforms can embed earned wage access, card issuance and transactions, instant payouts and workforce-data workflows under their own brand. The API surface is documented as OpenAPI-based inside a developer portal at developer.payactiv.com, which also carries the platform change log and sandbox environments; the portal requires an account, so no public specification, reference or sandbox values are reachable anonymously. Payactiv is registered with NMLS (ID 2591928) and holds state EWA licenses, and publishes a Trust Center citing SOC 2, ISO 27001, PCI DSS and CCPA.
+
+**Areas:** Company · Financial Services · Earned Wage Access · Payments · Payroll · Human Resources · Cards · Financial Wellness · Fintech
+
+## PayActiv on APIs.io
+
+Everything profiled for PayActiv is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/payactiv/](https://apis.io/providers/payactiv/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Payactiv Access-as-a-Service API](https://apis.io/apis/payactiv/payactiv-access-as-a-service-api/) — Access-as-a-Service is Payactiv's API-driven infrastructure for embedding Earned Wage Access, debit and payroll card programs, instant payouts, and HCM…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Payactiv Domain Security](https://apis.io/security/payactiv/payactiv-domain-security/)
+- [Payactiv Trust Center](https://apis.io/security/payactiv/payactiv-trust-center/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://payactiv.com/)
+- [Documentation](https://payactiv.com/developers/)
+- [Sign up](https://developer.payactiv.com/#/signup)
+- [Support](https://payactiv.com/help/)
+- [Blog](https://payactiv.com/category/blog/)
+- [Compliance](https://payactiv.com/trust-center/)
+- [Terms of service](https://payactiv.com/terms-of-use/)
+- [Privacy policy](https://payactiv.com/privacy-policy/)
+- [Status](https://status.payactiv.com/)
+
+## API Evangelist rating
+
+**Kin Score 24.9** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 15.8 |
+| Developer ergonomics | 16.7 |
+| Access clarity | 43.4 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 28.6** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/payactiv/](https://apis.io/providers/payactiv/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for PayActiv: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/payactiv/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
